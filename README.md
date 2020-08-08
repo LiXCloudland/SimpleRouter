@@ -1,9 +1,6 @@
-UCLA CS118 Project (Simple Router)
+Simple Router Project
+
 ====================================
-
-For more detailed information about the project and starter code, refer to the project description on CCLE.
-
-(For build dependencies, please refer to [`Vagrantfile`](Vagrantfile).)
 
 ## Makefile
 
@@ -13,22 +10,11 @@ Additionally, the `Makefile` a `clean` target, and `tarball` target to create th
 
 You will need to modify the `Makefile` to add your userid for the `.tar.gz` turn-in at the top of the file.
 
-## Academic Integrity Note
-
-You are encouraged to host your code in private repositories on [GitHub](https://github.com/), [GitLab](https://gitlab.com), or other places.  At the same time, you are PROHIBITED to make your code for the class project public during the class or any time after the class.  If you do so, you will be violating academic honestly policy that you have signed, as well as the student code of conduct and be subject to serious sanctions.
-
 ## Known Limitations
 
 When POX controller is restrated, the simpler router needs to be manually stopped and started again.
 
-## Acknowledgement
-
-This implementation is based on the original code for Stanford CS144 lab3 (https://bitbucket.org/cs144-1617/lab3).
-
 ## Project Report
-
-Name: Yuxin Wang
-UID: 905129084
 
 This project create a simple router that forwards packets. For any incoming packet that could pass the sanity check( minimum size, ttl, etc.), the router will fist deal with the Ethernet header. The router can handle two type of headers, arp and ip. For arp, the router will read the arp header, and deal with each type of arp, either send out apr request or read receied arp reply and deal with queued packets. For ip, the router will either reply with icmp message or forward the packet to the next hop. 
 
